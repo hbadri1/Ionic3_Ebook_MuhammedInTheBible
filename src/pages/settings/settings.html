@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center">
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="container">
+  <ion-item>
+    <ion-label style="font-size: 12px">Hide home page</ion-label>
+    <ion-toggle [(ngModel)]="hideHomePage" checked="hideHomePage" (ionChange)="updateHideHomePage()"></ion-toggle>
+  </ion-item>
+  <ion-label style="font-style: italic ; font-size: 10px">The page of language choice at the beginning.</ion-label>
+</ion-content>

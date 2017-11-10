@@ -1,0 +1,56 @@
+<ion-content class="slideContainer">
+  <!-- Header/Toolbar -->
+  <div *ngIf='showHeader'>
+    <ion-header>
+      <ion-toolbar>
+        <!-- Content Menu -->
+        <button ion-button menuToggle> 
+            <ion-icon name="list-box"></ion-icon>
+        </button>
+
+        <ion-buttons>
+          <!-- backbutton : navPush didn't work -->
+          <button ion-button (click)="navigateToOverview()"> 
+              <ion-icon name="arrow-back"></ion-icon>
+        </button>
+        </ion-buttons>
+
+        <ion-buttons end>
+          <button ion-button (click)="showBookMark()" end>
+                <ion-icon name="bookmark"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- Menu -->
+    <ion-menu [content]="content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Content</ion-title>
+        </ion-toolbar>
+        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-scroll style="width:100%;height:80vh" scrollY="true">
+          <ion-list class="myIonList">
+            <button ion-item *ngFor="let item of chaptersTitles; let i = index" (click)="goToChapter(item)">
+            {{item.name}}
+          </button>
+          </ion-list>
+        </ion-scroll>
+      </ion-header>
+    </ion-menu>
+  </div>
+  <!-- Content -->
+
+  <div class="myslides" #content>
+    <ion-slides (ionSlideDoubleTap)="showHideNavBar()" (ionSlideDidChange)="slideChanged()" centeredSlides spaceBetween=25
+      speed=500>
+      <ion-slide style="border:none">
+        <img style="width:100vw; height: 100vh" src={{titlePath}}/>
+      </ion-slide>
+      <ion-slide *ngFor="let th of pagesPaths; let i = index" [ngClass]="(i%2 ==0)?'rightShadow':'leftShadow'">
+        <img style="width:100vw; height: 100vh" src={{th}} class="images" />
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

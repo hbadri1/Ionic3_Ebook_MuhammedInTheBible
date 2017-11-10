@@ -1,0 +1,63 @@
+<ion-content  class="container">
+  <!-- <div class="container"> -->
+  <ion-card class="homecard" style="height: 45% !important">
+    <ion-card-header class="languageinfo">
+      Choose the language you wish for the book
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid text-center>
+        <ion-row center>
+          <button col-4 ion-button round [navPush]="enOverviewPage" (click)="SavePreferences()" color="language" class="mybutton">EN &nbsp;
+                        <ion-img src="assets/images/en.ico" width="5" height="5"></ion-img>
+            </button>
+          <!-- </ion-row>
+         <ion-row center>-->
+          <ion-col></ion-col>
+          <button col-4 ion-button round (click)="presentToast('النسخة باللغة العربية في طور الإنجاز')" color="language" class="mybutton">AR &nbsp;
+                    <ion-img src="assets/images/ksa.ico" width="5" height="5"></ion-img>
+            </button>
+        </ion-row>
+
+        <ion-row center>
+          <button col-4 ion-button round (click)="presentToast('Próximamente...')" color="language" class="mybutton">ES &nbsp;
+                     <ion-img src="assets/images/sp.ico" width="5" height="5"></ion-img>
+            </button>
+          <ion-col></ion-col>
+          <button col-4 ion-button round (click)="presentToast('Trés bientôt...')" color="language" class="mybutton">FR &nbsp;
+                    <ion-img src="assets/images/fr.ico" width="5" height="5"></ion-img>
+            </button>
+        </ion-row>
+
+        <ion-row center>
+          <button col-4 offset-4 ion-button round (click)="presentToast('Demnächst...')" color="language" class="mybutton">DE &nbsp;
+                      <ion-img src="assets/images/gr.ico" width="5" height="5"></ion-img>
+            </button>
+        </ion-row>
+
+        <!--<ion-row class="dontshow">
+          <ion-checkbox [(ngModel)]="hideHomePage" (ionChange)="updateHideHomePage()"></ion-checkbox>
+          <ion-label class="languagelabel">Don't display this page again</ion-label>
+        </ion-row> -->
+
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="homecard" style="height: 49% !important">
+    <ion-card-content style="padding: 0px">
+      <ion-slides style="margin-top: 0px; border:none;" centeredSlides autoplay=3000 effect='fade' loop=true pager=true>
+        <ion-slide *ngFor="let th of coverspath" style="width:100%;height:100%; border:none;">
+          <img style="margin-top: 15%;" src={{th}} />
+        </ion-slide>
+      </ion-slides></ion-card-content>
+  </ion-card>
+  <!-- Checkbox -->
+  <!--<div class="info">
+    <p>
+      <ion-icon name="information-circle" color="dark">
+      </ion-icon>
+      &nbsp;To see this screen again go to "Settings"
+    </p>
+  </div> -->
+  <!--  </div> -->
+</ion-content>

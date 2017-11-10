@@ -1,0 +1,26 @@
+//TODO
+
+ion-slide {
+    border: 2px solid #9A9492;
+    //box-shadow:inset  -10px 0px 10px 1px #ccc;
+}
+.myslides{
+    margin: 5px 5px 5px 5px;
+    height: 98%;
+}
+
+.slideContainer{
+    margin:0;
+}
+
+.leftShadow {
+    box-shadow:inset  20px 0px 10px 1px #ccc;
+}
+.rightShadow{
+    box-shadow:inset  -20px 0px 10px 1px #ccc;
+}
+.myIonList{
+    button{
+        font-size: 10px;
+    }
+}

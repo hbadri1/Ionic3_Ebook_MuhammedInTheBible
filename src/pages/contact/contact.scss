@@ -1,0 +1,21 @@
+.sponsor{
+    font-style: italic;
+    font-weight: bold;
+}
+.contact_footer{
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    //margin-top: 5%;
+    text-align: center;
+    //height: 25%;
+}
+.contact_body{
+   // height: 60vh;
+    text-align: center;
+    ion-icon{
+        font-size: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+}

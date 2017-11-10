@@ -1,0 +1,17 @@
+<div class="bookmarkclass">
+    <ion-list>
+        <button style="width:100%; font-size:14px;"
+        *ngIf='alreadyBookMarkedPage'
+        ion-button
+        (click)="gotToPage()">
+            Bookmarked Page: <span style="font-size:14px"> &nbsp; {{alreadyBookMarkedPage}}</span>
+            <span style="font-style:italic; font-size:8px"> &nbsp; (Click to go)</span>
+        </button>
+        <div *ngIf='!alreadyBookMarkedPage'>
+            <i>No bookmarked page!</i>
+        </div>
+    </ion-list>
+    <hr>
+    <button ion-button color="light"  style="width:100%; font-size:14px;" 
+    (click)="bookMarkThisPage()">Bookmark This Page?</button>
+</div>

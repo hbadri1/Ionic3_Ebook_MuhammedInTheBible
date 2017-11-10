@@ -1,0 +1,35 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-to-right">{{booktitle}}</ion-title>
+    <button ion-button menuToggle end> 
+        <ion-icon name="list"></ion-icon>
+    </button>
+    <ion-buttons start left>
+      <button ion-button (click)="goToFullScreen()"> 
+        <ion-icon name="contract"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-menu side="right" [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="text-to-right">الفهرس</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="text-to-right">
+    <ion-list class="text-to-right">
+      <button ion-item *ngFor="let chapter of chapters" (click)="goToChapter(chapter)">
+            {{chapter.title}}
+          </button>
+    </ion-list>
+  </ion-content>
+</ion-menu> -->
+
+<!-- Content -->
+<ion-content padding text-right #content>
+  <p style="text-align:center"> النسخة العربية ليست جاهزة بعد</p>
+</ion-content>

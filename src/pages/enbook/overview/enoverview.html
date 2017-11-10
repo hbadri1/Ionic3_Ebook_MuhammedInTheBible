@@ -1,0 +1,61 @@
+<ion-content padding class="container"> 
+  <h4>Muhammad in the Bible</h4>
+  <hr>
+  <ion-card class="homecard">
+    <ion-card-header class="languageinfo">
+      Want to hear an introductory audio?
+    </ion-card-header>
+    <ion-card-content>
+      <div style="text-align:center;">
+        <ion-row>
+          <p *ngIf="!isPlaying" col-6>Play</p>
+          <p *ngIf="isPlaying" col-6>Playing: {{percentage}}% </p>
+          <button col-3 color="light" (click)="goPlaying()"><ion-icon name="play"></ion-icon></button>
+          <button col-3 color="light" (click)="stopPlaying()"><ion-icon name="square"></ion-icon></button>
+        </ion-row>
+
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <hr>
+
+  <!-- <div class="container"> -->
+  <ion-card class="homecard">
+    <ion-card-header class="languageinfo">
+      Want to see an introductory video?
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button block (click)="playYoutubeVideo()" color="language" class="mybutton">
+          <ion-icon name="youtube"> Play</ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <hr>
+  <ion-grid>
+    <!-- To read the Ebook as HTML -->
+    <ion-row>
+      <!-- [navPush]="englishPage" 
+        <button col-6 offset-3 ion-button block  color="language" class="mybutton" (click)="presentToast2()">
+            Read Continuous
+          </button>-->
+    </ion-row>
+
+    <!-- To read the Ebook as Sliding pages -->
+    <ion-row>
+      <button col-6 offset-3 ion-button block (click)="init()" [navPush]="enThumbsPage" color="language" class="mybutton">
+            Go reading...
+          </button>
+    </ion-row>
+
+    <div class="more">
+      <p>
+        <ion-icon name="information-circle" color="dark">
+        </ion-icon>
+        &nbsp;Double Tap to swith from/to full screen mode.
+      </p>
+    </div>
+
+  </ion-grid>
+  <!-- </div> -->
+</ion-content>

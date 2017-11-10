@@ -1,0 +1,89 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.container{
+    background:linear-gradient(to bottom right, #24409E, rgba(62, 245, 236, 0.97));
+}
+
+/*.container {
+    padding: 2px 2px 2px 2px;
+    margin: auto;
+    border-radius: 15px;
+    background:linear-gradient(to bottom right, #F5EB94, #3F3905);
+    height: 98%;
+}*/
+
+ion-card{
+    border-radius: 15px;
+}
+ion-card-header{
+    text-align: center;
+    font-style: italic;
+    background-color: #C9D8EB;
+    //text-shadow: 2px 2px grey;
+    padding: 5px 5px 5px 5px;
+    margin: 5px auto;
+    border-radius: 15px;
+    font-size: 8px;
+}
+ion-row{
+    margin-bottom: 5px;
+}
+.alert{
+    color: #323438;
+    font-style: italic;
+    font-family: 'Comic Sans MS'
+}
+.page{
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.chapSubTitle{
+    text-align: center;
+}
+.indentedAndCapitalFirstLetter::first-letter{
+    font-size: 200%;
+}
+.indentedAndCapitalFirstLetter{
+    text-indent: 40px;
+}
+.indented{
+    text-indent: 40px;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.pbuh{
+    font-size: 50%;
+}
+.signature{
+    //float: right;
+    text-align: right;
+}
+.mybutton{
+    -webkit-box-shadow:0 4px 5px rgba(0,0,0,.3);
+    -moz-box-shadow:0 4px 5px rgba(0,0,0,.3);
+    box-shadow:0 4px 5px rgba(0,0,0,.3);
+    font-size: 10px;
+    padding: 1px 1px 1px 1px;
+    border-radius: 5px;
+    background:linear-gradient(to bottom right, #D0E3F0, rgba(30, 130, 223, 0.97));
+}
+.smallHeaders{
+    font-size: 12px;
+}
